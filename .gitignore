@@ -4,3 +4,5 @@ frontent/node_modules
 .env
 backend/.env
 frontent/.env
+
+backend/productSeeder.js
