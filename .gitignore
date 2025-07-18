@@ -5,4 +5,4 @@ frontent/node_modules
 backend/.env
 frontent/.env
 
-backend/productSeeder.js
+productSeeder.js
