@@ -12,7 +12,7 @@ require("dotenv").config();
 const app = express();
 app.use(
   cors({
-    origin: process.env.FRONTENT_URL, // your frontend
+    origin: "https://ecommerce-cart-full.vercel.app", // your frontend
     credentials: true, // allow cookies/cookies + token
   })
 );

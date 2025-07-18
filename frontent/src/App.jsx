@@ -19,14 +19,14 @@ const App = () => {
   const getUser = async () => {
     try {
       const res = await api.get("/auth/me");
-      //console.log(res.data);
+      console.log(res.data);
       setUser(res.data);
     } catch (error) {
       if (error.response && error.response.status === 401) {
         // Not logged in, so just ignore or clear user
         setUser(null);
       } else {
-        console.error("Error fetching user:", error);
+        console.error("Error fetching user:", error.message);
       }
     } finally {
       setLoadingUser(false);

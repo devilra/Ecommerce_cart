@@ -12,9 +12,10 @@ const Login = ({ onLogin, getUser }) => {
     e.preventDefault();
     try {
       const res = await api.post("/auth/login", { email, password });
+      // console.log(res.data.user);
       onLogin(res.data);
       getUser();
-      console.log(res.data.user);
+
       navigate("/");
     } catch (err) {
       alert(err.response?.data?.msg || "Login failed");

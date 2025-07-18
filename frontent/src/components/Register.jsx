@@ -14,6 +14,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const res = await api.post("/auth/register", form);
+      //console.log(res.data);
       navigate("/login");
     } catch (err) {
       alert(err.response?.data?.msg || "Registration failed");
